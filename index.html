@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vrijeplek.be — Vind direct vrije plekken bij lokale handelaren</title>
+  <meta name="description" content="Zoek bedrijven in je buurt en check meteen vrije tijdssloten. Aanmelden voor €9/maand of €80/jaar. 3 maanden gratis na eerste €9.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="/.netlify/identity/widget.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    Vrijeplek<span style="color:#94a3b8">.be</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <button class="button menu-btn" id="menuBtn">Categorieën ▾</button>
+      <div class="dropdown" id="menuDrop">
+        <div class="cols">
+          <div>
+            <a href="results.html?cat=Horeca"><b>Horeca</b><div class="kicker">incl. hotels/B&B, pizzeria</div></a>
+            <a href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+          </div>
+          <div>
+            <a href="results.html?cat=Diensten"><b>Diensten</b></a>
+            <a href="results.html?cat=Anders"><b>Anders</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="why.html">Waarom Vrijeplek?</a>
+    <a href="signup.html" class="button">Zaak aanmelden</a>
+    <a href="login.html" class="button primary" id="loginLink">Login</a>
+    <a href="#" class="button" id="logoutLink" style="display:none">Uitloggen</a>
+  </nav>
+</header>
+
+    <section class="hero">
+      <span class="badge">3 maanden gratis — daarna €9/maand · maandelijks opzegbaar</span>
+      <h1>Vind vrije plekken bij <u>lokale</u> handelaren</h1>
+      <p>Zoek op naam, categorie of locatie en boek meteen een vrij tijdslot. Bedrijven beheren hun agenda via hun eigen dashboard.</p>
+      <div class="searchbar">
+        <input class="input" type="search" id="q" placeholder="Zoek bedrijfsnaam… (bv. 'Bakkerij Emma')" />
+        <select id="cat">
+          <option value="">Alle categorieën</option>
+          <option>Horeca</option>
+          <option>Gezondheidszorg</option>
+          <option>Diensten</option>
+          <option>Anders</option>
+        </select>
+        <input class="input" id="loc" placeholder="Locatie (stad of postcode)" />
+        <button class="button primary" onclick="handleSearch()">Zoeken</button>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="kicker">Categorieën</div>
+      <div class="cat-grid">
+        <a class="cat" href="results.html?cat=Horeca"><b>Horeca</b><span class="tag">incl. hotels/B&B, pizzeria</span></a>
+        <a class="cat" href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+        <a class="cat" href="results.html?cat=Diensten"><b>Diensten</b></a>
+        <a class="cat" href="results.html?cat=Anders"><b>Anders</b></a>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <div class="kicker">In de buurt</div>
+      <p class="notice">Sta locatie toe om lokale handelaars met vrije plaatsen te tonen.</p>
+      <div id="nearby" class="grid" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+  </div>
+</body>
+</html>

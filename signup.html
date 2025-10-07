@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zaak aanmelden — Vrijeplek.be</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="/.netlify/identity/widget.js"></script>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand"><div class="logo"></div> Vrijeplek<span style="color:#94a3b8">.be</span></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Algemene voorwaarden</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Kies je plan</h3>
+        <div class="plan card" style="display:flex;align-items:center;justify-content:space-between">
+          <div><b>Maandelijks</b><br><small>€9/maand · 3 maanden gratis na eerste €9</small></div>
+          <button class="button primary" onclick="selectPlan('monthly')">Kiezen</button>
+        </div>
+        <div class="plan card" style="margin-top:10px;display:flex;align-items:center;justify-content:space-between">
+          <div><b>Jaar</b><br><small>€80/jaar · beste prijs</small></div>
+          <button class="button primary" onclick="selectPlan('yearly')">Kiezen</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="card">
+        <h2>Jouw gegevens</h2>
+        <form class="form" onsubmit="return startSignup(event)">
+          <div class="row">
+            <input class="input" id="company" required placeholder="Bedrijfsnaam" />
+            <input class="input" id="vat" required placeholder="BTW-nummer" />
+          </div>
+          <div class="row">
+            <select class="input" id="category" required>
+              <option value="">Kies categorie…</option>
+              <option>Horeca</option><option>Gezondheidszorg</option><option>Diensten</option><option>Anders</option>
+            </select>
+            <input class="input" id="email" type="email" required placeholder="Facturatie e-mail" />
+          </div>
+          <div class="row">
+            <input class="input" id="phone" placeholder="Telefoon" />
+            <input class="input" id="reviews" type="url" placeholder="Google Review URL (optioneel)" />
+          </div>
+          <input class="input" id="address" placeholder="Adres" />
+          <textarea class="input" id="bio" rows="4" placeholder="Korte beschrijving (max. 240 tekens)"></textarea>
+          <label class="checkbox">
+            <input id="agree" type="checkbox" required />
+            <span>Ik ga akkoord met de <a href="terms.html"><b>Algemene voorwaarden</b></a>. Zonder akkoord kun je niet verder.</span>
+          </label>
+          <button class="button primary" type="submit">Naar betaling</button>
+          <p class="notice">Na je eerste betaling van €9 krijg je 3 maanden gratis. Daarna €9/maand, maandelijks opzegbaar. Geen commissie of extra kosten.</p>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+</div>
+</body>
+</html>

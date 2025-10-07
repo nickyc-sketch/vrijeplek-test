@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zoekresultaten — Vrijeplek.be</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <script defer src="/.netlify/identity/widget.js"></script>
+</head>
+<body>
+<div class="container">
+  
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    Vrijeplek<span style="color:#94a3b8">.be</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <button class="button menu-btn" id="menuBtn">Categorieën ▾</button>
+      <div class="dropdown" id="menuDrop">
+        <div class="cols">
+          <div>
+            <a href="results.html?cat=Horeca"><b>Horeca</b><div class="kicker">incl. hotels/B&B, pizzeria</div></a>
+            <a href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+          </div>
+          <div>
+            <a href="results.html?cat=Diensten"><b>Diensten</b></a>
+            <a href="results.html?cat=Anders"><b>Anders</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="why.html">Waarom Vrijeplek?</a>
+    <a href="signup.html" class="button">Zaak aanmelden</a>
+    <a href="login.html" class="button primary" id="loginLink">Login</a>
+    <a href="#" class="button" id="logoutLink" style="display:none">Uitloggen</a>
+  </nav>
+</header>
+
+  <h2>Zoekresultaten</h2>
+  <p class="notice">Filter op categorie, naam of locatie. Klik door naar het bedrijfsprofiel om vrije agenda-plekken te zien.</p>
+  <div id="results" class="grid" aria-live="polite"></div>
+  <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+</div>
+</body>
+</html>

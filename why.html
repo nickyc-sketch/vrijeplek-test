@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waarom Vrijeplek? — Vrijeplek.be</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="/.netlify/identity/widget.js"></script>
+</head>
+<body>
+<div class="container">
+  
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    Vrijeplek<span style="color:#94a3b8">.be</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <button class="button menu-btn" id="menuBtn">Categorieën ▾</button>
+      <div class="dropdown" id="menuDrop">
+        <div class="cols">
+          <div>
+            <a href="results.html?cat=Horeca"><b>Horeca</b><div class="kicker">incl. hotels/B&B, pizzeria</div></a>
+            <a href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+          </div>
+          <div>
+            <a href="results.html?cat=Diensten"><b>Diensten</b></a>
+            <a href="results.html?cat=Anders"><b>Anders</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="why.html">Waarom Vrijeplek?</a>
+    <a href="signup.html" class="button">Zaak aanmelden</a>
+    <a href="login.html" class="button primary" id="loginLink">Login</a>
+    <a href="#" class="button" id="logoutLink" style="display:none">Uitloggen</a>
+  </nav>
+</header>
+
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Voordelen</h3>
+        <ul>
+          <li>Meer zichtbaarheid in je regio</li>
+          <li>Eigen profiel met Google Reviews</li>
+          <li>Klanten zien meteen je vrije tijdssloten</li>
+          <li>Maandelijks opzegbaar — geen commissie</li>
+        </ul>
+        <a href="signup.html" class="button primary" style="width:100%">Start nu</a>
+      </div>
+    </aside>
+    <main>
+      <div class="card">
+        <div class="kicker">Waarom Vrijeplek?</div>
+        <h2>Vul je agenda met klanten uit de buurt</h2>
+        <p>Vrijeplek.be is hét platform waar klanten snel een beschikbare plek vinden. Als handelaar beheer je je agenda in een eenvoudig dashboard en toon je optioneel je Google Reviews. Je betaalt een vaste prijs: €9/maand of €80/jaar — zonder verborgen kosten.</p>
+      </div>
+      <div class="grid" style="margin-top:16px">
+        <div class="card"><h3>Eenvoudig dashboard</h3><p>Beheer je beschikbaarheid en profiel in enkele klikken.</p></div>
+        <div class="card"><h3>Lokale zichtbaarheid</h3><p>Klanten in de buurt vinden je op categorie, naam of locatie.</p></div>
+        <div class="card"><h3>Geen commissie</h3><p>Vaste prijs. Maandelijks opzegbaar. 3 maanden gratis na eerste betaling.</p></div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

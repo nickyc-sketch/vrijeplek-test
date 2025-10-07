@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Vrijeplek.be</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="/.netlify/identity/widget.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="container">
+  
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    Vrijeplek<span style="color:#94a3b8">.be</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <button class="button menu-btn" id="menuBtn">Categorieën ▾</button>
+      <div class="dropdown" id="menuDrop">
+        <div class="cols">
+          <div>
+            <a href="results.html?cat=Horeca"><b>Horeca</b><div class="kicker">incl. hotels/B&B, pizzeria</div></a>
+            <a href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+          </div>
+          <div>
+            <a href="results.html?cat=Diensten"><b>Diensten</b></a>
+            <a href="results.html?cat=Anders"><b>Anders</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="why.html">Waarom Vrijeplek?</a>
+    <a href="signup.html" class="button">Zaak aanmelden</a>
+    <a href="login.html" class="button primary" id="loginLink">Login</a>
+    <a href="#" class="button" id="logoutLink" style="display:none">Uitloggen</a>
+  </nav>
+</header>
+
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Jouw profiel</h3>
+        <p><b>Email:</b> <span id="uEmail">-</span></p>
+        <p><b>Status:</b> Ingelogd</p>
+        <a id="toBilling" class="button" href="#">Facturen</a>
+      </div>
+      <div class="card">
+        <h3>Snelle acties</h3>
+        <div class="form">
+          <button class="button primary" onclick="addSlot()">+ Tijdslot</button>
+          <button class="button" onclick="syncSlots()">Vernieuw</button>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="card">
+        <h2>Agenda (vrije slots)</h2>
+        <table class="table" id="slotsTable"><tr><td>Laden…</td></tr></table>
+      </div>
+
+      <div class="card">
+        <h2>Profiel</h2>
+        <div class="form">
+          <div class="row">
+            <input class="input" id="company" placeholder="Bedrijfsnaam" />
+            <input class="input" id="vat" placeholder="BTW-nummer" />
+          </div>
+          <div class="row">
+            <select class="input" id="category">
+              <option>Horeca</option><option>Gezondheidszorg</option><option>Diensten</option><option>Anders</option>
+            </select>
+            <input class="input" id="reviews" placeholder="Google Review URL" />
+          </div>
+          <div class="row">
+            <input class="input" id="address" placeholder="Adres" />
+            <input class="input" id="phone" placeholder="Telefoon" />
+          </div>
+          <textarea class="input" id="bio" rows="4" placeholder="Korte beschrijving (max. 240)"></textarea>
+          <button class="button" onclick="saveProfile()">Profiel opslaan</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+</div>
+</body>
+</html>

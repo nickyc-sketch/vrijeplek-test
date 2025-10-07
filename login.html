@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Vrijeplek.be</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="/.netlify/identity/widget.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="container">
+  
+<header class="header">
+  <div class="brand">
+    <div class="logo"></div>
+    Vrijeplek<span style="color:#94a3b8">.be</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <button class="button menu-btn" id="menuBtn">Categorieën ▾</button>
+      <div class="dropdown" id="menuDrop">
+        <div class="cols">
+          <div>
+            <a href="results.html?cat=Horeca"><b>Horeca</b><div class="kicker">incl. hotels/B&B, pizzeria</div></a>
+            <a href="results.html?cat=Gezondheidszorg"><b>Gezondheidszorg</b></a>
+          </div>
+          <div>
+            <a href="results.html?cat=Diensten"><b>Diensten</b></a>
+            <a href="results.html?cat=Anders"><b>Anders</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="why.html">Waarom Vrijeplek?</a>
+    <a href="signup.html" class="button">Zaak aanmelden</a>
+    <a href="login.html" class="button primary" id="loginLink">Login</a>
+    <a href="#" class="button" id="logoutLink" style="display:none">Uitloggen</a>
+  </nav>
+</header>
+
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Nog geen account?</h3>
+        <p>Start met €9 nu en krijg 3 maanden gratis. Daarna €9/maand.</p>
+        <a href="signup.html" class="button primary" style="width:100%">Account maken</a>
+      </div>
+    </aside>
+    <main>
+      <div class="card">
+        <h2>Inloggen</h2>
+        <p class="notice">Gebruik de Netlify Identity widget hieronder om in te loggen of te registreren.</p>
+        <div data-netlify-identity-menu></div>
+        <div style="margin-top:12px" data-netlify-identity-button>Log in</div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">© <span id="year"></span> Vrijeplek.be · <a href="terms.html">Algemene voorwaarden</a></footer>
+</div>
+</body>
+</html>
